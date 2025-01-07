@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML with CSS and JavaScript</title>
+    <style>
+        /* 全局設定 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 文字樣式 */
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #666;
+            text-align: center;
+        }
+
+        /* 容器設計 */
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 按鈕設計 */
+        .btn {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px 15px;
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello World</h1>
+        <p>這是一個包含 HTML、CSS 和 JavaScript 的簡單範例。</p>
+        <button id="alertButton" class="btn">點擊我！</button>
+        <p id="dynamicText"></p>
+    </div>
+
+    <script>
+        // JavaScript 內嵌在這裡
+        // 取得按鈕和段落元素
+        const button = document.getElementById('alertButton');
+        const dynamicText = document.getElementById('dynamicText');
+
+        // 設定按鈕點擊事件
+        button.addEventListener('click', function() {
+            alert('你點擊了按鈕！');
+            dynamicText.textContent = '你已經點擊過按鈕了！';
+            button.style.backgroundColor = '#28a745'; // 按鈕變成綠色
+            button.textContent = '已點擊';
+            button.disabled = true; // 禁用按鈕
+        });
+    </script>
+</body>
+</html>
