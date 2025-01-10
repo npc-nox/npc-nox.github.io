@@ -65,8 +65,41 @@
             <img src="./images/centerImg.jpg">
         </div>
         
-        <button id="openMapButton" onclick="alert('按鈕被點擊！')">開啟地圖</button>
+        <button id="openMapButton" onclick="goPage()">開啟地圖</button>
         <!-- <button class="myButton">點擊我 2</button> -->
+
+        <script>
+            // JavaScript 內嵌在這裡
+            // 宣告變數
+            let name = "Alice"; // 可以更改
+            const age = 25;     // 不可更改
+            var city = "Taipei"; // 可更改 (舊方式)
+
+            name = "Jack";
+            //age = age + 1;
+
+            // 顯示在控制台
+            console.log("Name:", name);
+            console.log("Age:", age);
+            console.log("City:", city);
+
+            name = "May";
+            console.log("Name:", name);
+            
+            greet("Marry");
+            greet(name);
+            greet("Jerromy");
+            greet();
+
+            function greet( who = "Orange" ) {
+                console.log("HI," + who + "! ");
+            }
+
+            function goPage(){
+                window.location.href = "https://tw.yahoo.com";
+            }
+
+        </script>
         
     </body>
 </html>
