@@ -11,7 +11,6 @@
                 font-family: Arial, sans-serif;
                 background-color: #FFFFFF;
                 color: #000000;
-                margin: 30px;
                 text-align: center;
             }
 
@@ -21,13 +20,34 @@
                 width: 200px;
                 margin-left: -100px;
                 border-radius: 5px;
-                bottom: 30px;
+                bottom: 10px;
                 padding: 10px;
                 cursor: pointer;
                 border: none;
                 color: #FFFFFF;
                 background-color: #222222;
                 
+            }
+
+            #imgDiv{
+                position:absolute;
+                
+                left: 50%;
+                margin-left: -150px;
+
+                top: 50%;
+                margin-top: -150px;
+               
+                width: 300px;
+                height: 300px;
+                /* background-color: red; */
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
             }
 
           
@@ -38,8 +58,13 @@
     </head>
     <body>
         元宇宙學程實戰
+
         <BR>
-          
+        
+        <div id="imgDiv">
+            <img src="./images/centerImg.jpg">
+        </div>
+        
         <button id="openMapButton" onclick="alert('按鈕被點擊！')">開啟地圖</button>
         <!-- <button class="myButton">點擊我 2</button> -->
         
