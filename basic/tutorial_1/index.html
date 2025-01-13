@@ -4,56 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>基本練習</title>
-
-        <style>
-            /* CSS */
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #FFFFFF;
-                color: #000000;
-                text-align: center;
-            }
-
-
-            #openMapButton {
-                position: absolute;
-                width: 200px;
-                margin-left: -100px;
-                border-radius: 5px;
-                bottom: 10px;
-                padding: 10px;
-                cursor: pointer;
-                border: none;
-                color: #FFFFFF;
-                background-color: #222222;
-                
-            }
-
-            #imgDiv{
-                position:absolute;
-                
-                left: 50%;
-                margin-left: -150px;
-
-                top: 50%;
-                margin-top: -150px;
-               
-                width: 300px;
-                height: 300px;
-                /* background-color: red; */
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-
-          
-    
-        </style>
-
+        <link rel="stylesheet" href="./css/main.css">
 
     </head>
     <body>
@@ -79,17 +30,41 @@
             //age = age + 1;
 
             // 顯示在控制台
-            console.log("Name:", name);
-            console.log("Age:", age);
-            console.log("City:", city);
+            //console.log("Name:", name);
+            //console.log("Age:", age);
+            //console.log("City:", city);
 
-            name = "May";
-            console.log("Name:", name);
+            //name = "May";
+            //console.log("Name:", name);
             
-            greet("Marry");
-            greet(name);
-            greet("Jerromy");
-            greet();
+            let hi = sayHi("Jack", "May", "Jerromy", "Mark");
+            console.log(hi);
+
+            let person = {
+                name:"Jerromy",
+                age: 30,
+                teach: function (course){
+                    console.log("Im Teaching!" + " " + course);
+                }
+            };
+
+            console.log(person.name);
+            console.log(person.age);
+            console.log(person.teach("metaverse"));
+
+            const money = 20;
+            if( money > 20  ){
+                console.log("Greater than 20");
+            }else{
+                console.log("Less or Equal than 20");
+            }
+
+            function sayHi(a, b, c, d){
+                
+                return "HI," + a + " " + b + " " + c + " " + d + "! ";
+                //console.log("HI," + a + " " + b + " " + c + " " + d + "! ");
+
+            }
 
             function greet( who = "Orange" ) {
                 console.log("HI," + who + "! ");
