@@ -1,3 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    
+}
+
 #map { 
     height: 300px; 
 }
@@ -6,4 +14,19 @@
     width: 100%;
     background-color: white;
     height: 200px;
+}
+
+#openCameraButton {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+    border-radius: 5px;
+    bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    color: #FFFFFF;
+    background-color: #222222;
+    
 }

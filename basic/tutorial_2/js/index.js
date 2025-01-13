@@ -42,4 +42,8 @@ marker3.on('click', function () {
     map.panTo([25.08365587103092, 121.55747698890538]); // 平移到台北 101
 });
 
+function goPage(){
+    window.location.href = "https://mira-ar.n010.app/show/XGJFpE";
+}
+
 //25.02628220891764, 121.52756985187678
