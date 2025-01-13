@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    text-align: center;
+}
+
+
+#returnHomeButton {
+    position: absolute;
+    width: 200px;
+    margin-left: -100px;
+    border-radius: 5px;
+    bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    color: #FFFFFF;
+    background-color: #222222;
+    
+}
+
+#imgDiv{
+    position:absolute;
+    
+    left: 50%;
+    margin-left: -150px;
+
+    top: 50%;
+    margin-top: -150px;
+   
+    width: 300px;
+    height: 300px;
+    /* background-color: red; */
+}
+
+#centerimg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#qrcode {
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -128px;
+    margin-top: -128px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>結果</title>
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="./js/qrcode.js"></script>
+    </head>
+    <body>
+        恭喜您完成任務!
+
+        <BR>
+        
+        <div id="qrcode"></div>
+
+        <!-- <div id="imgDiv">
+            <img src="./images/centerImg2.jpg">
+        </div> -->
+        
+        <button id="returnHomeButton" onclick="goPage()">返回首頁</button>
+        <!-- <button class="myButton">點擊我 2</button> -->
+
+        <script>
+            var qrcode = new QRCode("qrcode", {
+                text: "ntnu",
+                width: 256,
+                height: 256,
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        </script>
+        
+    </body>
+</html>
