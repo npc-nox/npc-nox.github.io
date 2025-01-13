@@ -1,0 +1,9 @@
+#map { 
+    height: 300px; 
+}
+
+#info {
+    width: 100%;
+    background-color: white;
+    height: 200px;
+}
