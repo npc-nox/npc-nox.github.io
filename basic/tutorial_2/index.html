@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>基本練習</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+
+        <style>
+
+            #map { 
+                height: 300px; 
+            }
+
+            #info {
+                width: 100%;
+                background-color: red;
+                height: 200px;
+            }
+
+        </style>
+
+
+    </head>
+    <body>
+        
+        地圖教學
+
+        <BR>
+        
+        <div id="map"></div>
+        <div id="info">xxx</div>
+        <button id="開起相機">開啟相機</button>
+            
+        
+        <!-- <button id="openMapButton" onclick="goPage()">開啟地圖</button> -->
+        <!-- <button class="myButton">點擊我 2</button> -->
+
+        <script>
+
+            // 創建地圖並設定中心點與縮放等級
+            var map = L.map('map').setView([25.033964, 121.564468], 13); // 台北 101 的經緯度
+            var infoDiv = document.getElementById('info');
+
+            // 添加地圖圖層（OpenStreetMap 作為範例）
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // 添加標記點
+            var marker = L.marker([25.033964, 121.564468]).addTo(map)
+                .bindPopup('這裡是台北 101!')
+                //.openPopup();
+
+            marker.on('click', function () {
+                infoDiv.textContent = '你點擊了: 台北 101 ';
+                map.panTo([25.033964, 121.564468]); // 平移到台北 101
+            });
+
+            function goPage(){
+                window.location.href = "https://tw.yahoo.com";
+            }
+
+        </script>
+        
+    </body>
+</html>
